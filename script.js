@@ -7,6 +7,7 @@ buttonSubmit.addEventListener('click', e => {
     let email = document.querySelector('#email');
     if(!validEmail.test(email.value) || email.value == '') {
         email.classList.toggle('email-action-container-invalid');
+        email.value = '';
         email.placeholder = 'Invalid email address...';
         
         setTimeout(() => {
